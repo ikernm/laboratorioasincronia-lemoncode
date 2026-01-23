@@ -1,8 +1,8 @@
 import axios from "axios";
-import { Personaje } from './model.ts';
+import { Personaje } from './model';
 
 export const obtenerPersonajes = async (): Promise<Personaje[]> => {
-    
+
     try {
         const response = await axios.get<Personaje[]>('http://localhost:3000/personajes/1');
         return response.data;
@@ -10,5 +10,5 @@ export const obtenerPersonajes = async (): Promise<Personaje[]> => {
     catch (error) {
         throw new Error('Error al obtener los personajes');
     }
-    
+
 }

@@ -1,8 +1,7 @@
-import { Personaje } from "./model.ts";
-import { obtenerPersonajes } from "./api.ts";
+import { obtenerPersonajes } from "./api";
 
 const mostrarPersonajes = async (): Promise<void> => {
-    try {
+  try {
     const personaje = await obtenerPersonajes();
     console.log("Personaje:", personaje);
   } catch (error) {
@@ -11,7 +10,6 @@ const mostrarPersonajes = async (): Promise<void> => {
 };
 
 document.addEventListener("DOMContentLoaded", async () => {
-  await mostrarPersonajes()
-}
-);
+  await mostrarPersonajes();
+});
 
