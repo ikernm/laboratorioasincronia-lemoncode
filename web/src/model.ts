@@ -1,9 +1,9 @@
 export interface Personaje {
-    id: number;
+    id: string;
     nombre: string;
     apodo: string;
     especialidad: string;
     habilidades: string[];
-    amigos: string;
+    amigo: string;
     imagen: string;
 }
