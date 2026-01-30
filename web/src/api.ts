@@ -4,7 +4,8 @@ import { Personaje } from './model';
 export const obtenerPersonajes = async (): Promise<Personaje[]> => {
 
     try {
-        const response = await axios.get<Personaje[]>('http://localhost:3000/personajes');
+        let url = "http://localhost:3000/personajes";
+        const response = await axios.get<Personaje[]>(url);
         return response.data;
     }
     catch (error) {
